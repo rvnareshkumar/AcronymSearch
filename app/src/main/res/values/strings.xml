@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Acronym Search</string>
+    <string name="search_hint">Search your acronyms here</string>
+    <string name="no_data_available">No Data Available</string>
+
+    <string name="text_label_since">Since: %d</string>
+    <string name="text_label_frequency">Frequency: %d</string>
+</resources>
