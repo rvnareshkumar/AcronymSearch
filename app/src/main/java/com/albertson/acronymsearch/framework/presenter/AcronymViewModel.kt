@@ -4,13 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.albertson.acronymsearch.domain.model.AcronymResponse
 import com.albertson.acronymsearch.domain.model.Result
 import com.albertson.acronymsearch.domain.usecase.FetchUseCase
 import com.albertson.acronymsearch.framework.model.ViewStateData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_article_view"
+        android:id="@+id/acronym_details_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/margin_small"

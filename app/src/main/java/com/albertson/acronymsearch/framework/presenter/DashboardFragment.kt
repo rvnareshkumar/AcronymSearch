@@ -9,7 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.albertson.acronymsearch.R
 import com.albertson.acronymsearch.databinding.FragmentDashboardBinding
-import com.albertson.acronymsearch.domain.model.AcronymResponse
 import com.albertson.acronymsearch.utils.gone
 import com.albertson.acronymsearch.utils.show
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,7 +38,7 @@ class DashboardFragment : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    binding.recyclerArticleView.apply {
+    binding.acronymDetailsList.apply {
       layoutManager = LinearLayoutManager(context)
       adapter = acronymsAdapter
     }
@@ -50,7 +49,7 @@ class DashboardFragment : Fragment() {
       } else if (viewStateData.isDataAvailable) {
         hideProgress()
         if (viewStateData.data?.isNotEmpty() == true) {
-          acronymsAdapter.setData(viewStateData.data[0].lfs!!)
+          acronymsAdapter.setData(viewStateData.data[0].longFormList!!)
         } else
           showError()
       } else if (viewStateData.error != null) {
@@ -68,7 +67,7 @@ class DashboardFragment : Fragment() {
   private fun showError(resID: Int = R.string.no_data_available) {
     binding.apply {
       progressContainer.root.gone()
-      recyclerArticleView.gone()
+      acronymDetailsList.gone()
       emptyStatus.apply {
         text = getString(resID)
         show()
@@ -79,7 +78,7 @@ class DashboardFragment : Fragment() {
   private fun showProgress() {
     binding.apply {
       progressContainer.root.show()
-      recyclerArticleView.gone()
+      acronymDetailsList.gone()
       emptyStatus.gone()
     }
   }
@@ -87,7 +86,7 @@ class DashboardFragment : Fragment() {
   private fun hideProgress() {
     binding.apply {
       progressContainer.root.gone()
-      recyclerArticleView.show()
+      acronymDetailsList.show()
       emptyStatus.gone()
     }
   }

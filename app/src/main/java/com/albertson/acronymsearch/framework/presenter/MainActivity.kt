@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.albertson.acronymsearch.R
 import dagger.hilt.android.AndroidEntryPoint
 import com.albertson.acronymsearch.databinding.ActivityMainBinding

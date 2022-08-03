@@ -42,7 +42,7 @@ class AcronymListViewHolder(
   fun bind(item: LongForm) {
     binding.apply {
       binding.apply {
-        itemAcronymName.text = item.lf
+        itemAcronymName.text = item.longFormText
         itemAcronymFrequency.text =
           root.resources.getString(R.string.text_label_frequency, item.freq)
         itemAcronymSince.text =
